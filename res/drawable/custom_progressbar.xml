@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Background is a rectangle with a solid black fill -->
+    <item android:id="@+id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp"/>
+            <solid android:color="#000000"/>  
+            <stroke android:width="4dp"
+                        android:color="#ffffff"/>
+            
+        </shape>
+    </item>
+    
+    <!-- The secondary progress,a gradient with a stroke and a padding -->
+    <item android:id="@+id/secondaryProgress">
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="8dp"/>
+                <gradient 
+                    android:startColor="#6c006d"
+                    android:centerColor="#e100e0"
+                    android:endColor="#ff28ff"
+                    android:angle="0"
+                    android:type="linear"
+                    />
+                 <stroke android:width="4dp"
+                        android:color="#ffffff"/>
+                
+            </shape>
+        </clip>
+    </item>
+    
+    <!-- Adding a nine-patch instead of a clip -->
+    <item android:id="@+id/progress">
+       <shape android:shape="rectangle">
+            <corners android:radius="8dp"/>
+            <stroke android:width="4dp"
+                        android:color="#ffffff"/>
+        <scale android:scaleWidth="100%"
+               android:drawable="@drawable/untitled_1"/></shape>        
+    </item>
+</layer-list>
